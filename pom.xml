@@ -17,6 +17,7 @@
         <module>springcloud-question</module>
         <module>springcloud-study</module>
         <module>springcloud-channel</module>
+        <module>renren-fast</module>
     </modules>
     
 </project>
