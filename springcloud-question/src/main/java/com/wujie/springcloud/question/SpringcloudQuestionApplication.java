@@ -1,4 +1,4 @@
-package com.wujie.springcloudquestion;
+package com.wujie.springcloud.question;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
