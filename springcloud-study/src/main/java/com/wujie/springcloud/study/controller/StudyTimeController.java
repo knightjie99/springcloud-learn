@@ -32,6 +32,18 @@ public class StudyTimeController {
     private StudyTimeService studyTimeService;
 
     /**
+     * 测试
+     */
+    @RequestMapping("/member/list/test")
+    public R memberStudyTimeTest(){
+        StudyTimeEntity studyTimeEntity = new StudyTimeEntity();
+        studyTimeEntity.setTotalTime(100); // 学习时长：100分钟
+        studyTimeEntity.setQuesType(1L); // 题目类型：1 （javaBasic）
+
+        return R.ok().put("studyTime", Arrays.asList(studyTimeEntity));
+    }
+
+    /**
      * 列表
      */
     @RequestMapping("/list")

@@ -1,10 +1,11 @@
 server:
-  port: 12000
+  port: 8000
+
 
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springcloud_sms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/springcloud_chms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
 
@@ -13,7 +14,7 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
   application:
-    name: springcloud-study
+    name: springcloud-channel
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
