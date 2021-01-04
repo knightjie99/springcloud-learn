@@ -1,0 +1,15 @@
+server:
+  port: 8060
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: route_aliyun
+          uri: http://www.aliyun.com
+          predicates: # 断言
+            - Query=url,aliyun
+        - id: route_baidu
+          uri: http://www.baidu.com
+          predicates: # 断言
+            - Query=url,baidu

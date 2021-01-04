@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: springcloud-member
+  cloud:
+    nacos:
+      config:
+        extension-configs:
+          - data-id: datasource.yml
+            group: dev
+            refresh: true
+          - data-id: mybatis.yml
+            group: dev
+            refresh: true
+          - data-id: more.yml
+            group: dev
+            refresh: true
+        group: prod
+        namespace: springcloud-member
+        server-addr: 127.0.0.1:8848

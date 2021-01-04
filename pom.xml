@@ -20,6 +20,7 @@
         <module>renren-fast</module>
         <module>renren-generator</module>
         <module>springcloud-common</module>
+        <module>springcloud-gateway</module>
     </modules>
     
 </project>
