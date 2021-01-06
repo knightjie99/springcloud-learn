@@ -5,11 +5,9 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: route_aliyun
-          uri: http://www.aliyun.com
+        - id: route_thirdparty # 题目微服务路由规则
+          uri: lb://springcloud-thirdparty # 负载均衡，将请求转发到注册中心注册的springcloud-thirdparty服务
           predicates: # 断言
-            - Query=url,aliyun
-        - id: route_baidu
-          uri: http://www.baidu.com
-          predicates: # 断言
-            - Query=url,baidu
+            - Path=/api/thirdparty/** # 如果前端请求路径包含 api/thirdparty，则应用这条路由规则
+          filters: #过滤器
+            - RewritePath=/api/(?<segment>.*),/$\{segment} # 将跳转路径中包含的api替换成空

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: springcloud-thirdparty
+  cloud:
+    nacos:
+      config:
+        extension-configs:
+          - data-id: oss.yml
+            group: DEFAULT_GROUP
+            refresh: true
+        namespace: springcloud-thirdparty
+        server-addr: 127.0.0.1:8848
