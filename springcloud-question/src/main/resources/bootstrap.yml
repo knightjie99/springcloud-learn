@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: springcloud-question
+  cloud:
+    nacos:
+      config:
+        extension-configs:
+          - data-id: datasource.yml
+            group: dev
+            refresh: true
+          - data-id: mybatis.yml
+            group: dev
+            refresh: true
+          - data-id: more.yml
+            group: dev
+            refresh: true
+        namespace: springcloud-question
+        server-addr: 127.0.0.1:8848

@@ -8,6 +8,8 @@
 
 package com.wujie.common.utils;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * 常量
  *

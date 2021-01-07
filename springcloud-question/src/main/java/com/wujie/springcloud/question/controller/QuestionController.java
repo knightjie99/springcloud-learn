@@ -16,6 +16,7 @@ import com.wujie.springcloud.question.service.QuestionService;
 import com.wujie.common.utils.PageUtils;
 import com.wujie.common.utils.R;
 
+import javax.validation.Valid;
 
 
 /**
@@ -59,7 +60,7 @@ public class QuestionController {
      */
     @RequestMapping("/save")
     @RequiresPermissions("question:question:save")
-    public R save(@RequestBody QuestionEntity question){
+    public R save(@Valid @RequestBody QuestionEntity question){
 		questionService.save(question);
 
         return R.ok();
